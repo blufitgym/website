@@ -37,10 +37,10 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div
           className={[
-            'flex h-[60px] items-center justify-between border transition-all duration-300 sm:h-[68px]',
+            'flex h-[60px] items-center justify-between border border-[#223042] transition-all duration-300 sm:h-[68px] sm:border-white/10',
             scrolled
-              ? 'border-white/10 bg-[#0a0f16]/95 shadow-[0_18px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl'
-              : 'border-white/8 bg-[#0a0f16]/88 shadow-[0_16px_36px_rgba(0,0,0,0.18)] backdrop-blur-md',
+              ? 'bg-[#0a0f16]/95 shadow-[0_18px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl'
+              : 'bg-[#0a0f16]/92 shadow-[0_16px_36px_rgba(0,0,0,0.18)] backdrop-blur-md',
           ].join(' ')}
         >
           <Link href="/" className="relative flex items-center px-3 sm:px-4">
@@ -82,7 +82,7 @@ export function Navbar() {
 
           <button
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-10 w-10 items-center justify-center border border-white/10 bg-white/5 text-white lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center border border-[#263042] bg-[#101724] text-white lg:hidden"
             onClick={() => setOpen((value) => !value)}
             type="button"
           >
@@ -92,21 +92,23 @@ export function Navbar() {
       </div>
 
       {open ? (
-        <div className="fixed inset-0 z-[54] flex flex-col bg-brand-black px-6 pt-24 lg:hidden">
-          <div className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center gap-8 text-center">
-            {navItems.map((item, index) => (
-              <Link
-                key={item.href}
-                className="font-display text-[40px] uppercase leading-none text-white transition-colors hover:text-brand-blue sm:text-[48px]"
-                href={item.href}
-                style={{ animationDelay: `${index * 80}ms` }}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Button href={WA_DEFAULT} target="_blank" variant="primary" className="mt-6 w-full max-w-sm">
-              WhatsApp Us
-            </Button>
+        <div className="fixed inset-x-0 top-[72px] z-[54] px-3 lg:hidden">
+          <div className="mx-auto w-full max-w-7xl border border-[#223042] bg-[#0a0f16]/98 px-5 py-6 shadow-[0_24px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+            <div className="flex flex-col gap-5 text-center">
+              {navItems.map((item, index) => (
+                <Link
+                  key={item.href}
+                  className="font-display text-[22px] uppercase leading-none tracking-[0.08em] text-white transition-colors hover:text-brand-blue sm:text-[28px]"
+                  href={item.href}
+                  style={{ animationDelay: `${index * 80}ms` }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button href={WA_DEFAULT} target="_blank" variant="primary" className="mt-2 w-full">
+                WhatsApp Us
+              </Button>
+            </div>
           </div>
         </div>
       ) : null}

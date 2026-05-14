@@ -44,16 +44,16 @@ export function FacilitiesStrip() {
   const y = useTransform(scrollYProgress, [0, 1], ['-6%', '6%']);
 
   return (
-    <section ref={ref} className="bg-brand-dark py-28 md:py-36">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[55%_45%] lg:px-8">
+    <section ref={ref} className="bg-brand-dark py-16 sm:py-28 md:py-36">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[55%_45%] lg:gap-12 lg:px-8">
         <FadeUp>
           <div>
             <SectionLabel>Our Facilities</SectionLabel>
-            <h2 className="max-w-xl font-display text-[42px] font-bold uppercase leading-[0.95] tracking-display text-white sm:text-[58px] lg:text-[72px]">
+            <h2 className="max-w-xl font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.96] tracking-display text-white sm:text-[48px] lg:text-[60px]">
               A Gym That Goes Beyond the Weights
             </h2>
             <div className="mt-6 h-[3px] w-12 bg-brand-blue" />
-            <p className="mt-6 max-w-2xl text-[16px] leading-[1.75] text-brand-light">
+            <p className="mt-6 max-w-2xl text-[15px] leading-[1.7] text-brand-light sm:text-[16px] sm:leading-[1.75]">
               We built more than a gym. Every facility is designed to make your fitness journey
               better, more comfortable, and more rewarding.
             </p>
@@ -63,17 +63,17 @@ export function FacilitiesStrip() {
                 const Icon = item.icon;
                 return (
                   <div
-                    key={item.title}
+                  key={item.title}
                     className="flex items-start gap-4 border border-white/5 bg-brand-card/50 px-4 py-4 transition-colors hover:border-brand-blue/30"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center bg-brand-blueGlow text-brand-blue">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-display text-[18px] uppercase tracking-display text-white">
+                      <h3 className="font-display text-[17px] uppercase tracking-display text-white sm:text-[18px]">
                         {item.title}
                       </h3>
-                      <p className="mt-1 text-[14px] leading-6 text-brand-light">{item.desc}</p>
+                      <p className="mt-1 text-[13px] leading-6 text-brand-light sm:text-[14px]">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -83,7 +83,7 @@ export function FacilitiesStrip() {
         </FadeUp>
 
         <motion.div
-          className="relative min-h-[640px] overflow-hidden"
+          className="relative min-h-[360px] overflow-hidden sm:min-h-[500px] lg:min-h-[640px]"
           style={{ y }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

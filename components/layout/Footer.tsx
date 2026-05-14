@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, MessageSquare, MapPin, Clock3, ArrowUpRight } from 'lucide-react';
+import { Instagram, MapPin, Clock3, ArrowUpRight } from 'lucide-react';
 import { ADDRESS, HOURS_SUNDAY, HOURS_WEEKDAY, INSTAGRAM, MAPS_URL, WA_DEFAULT } from '@/lib/constants';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
 const logoSrc = encodeURI('/Blue Fit Logo.png');
 
@@ -14,10 +15,10 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-[#050810]">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-[1.3fr_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <Image alt="blufit logo" height={72} src={logoSrc} width={240} />
+            <Image alt="blufit logo" height={72} src={logoSrc} width={240} className="h-11 w-auto sm:h-12" />
             <p className="mt-5 max-w-sm text-[13px] leading-7 text-brand-muted">
               Premium fitness in Bondel, built for focused training, strong coaching, and a clean
               club experience.
@@ -56,7 +57,7 @@ export function Footer() {
                 target="_blank"
               >
                 Message on WhatsApp
-                <MessageSquare className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -89,22 +90,33 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <MessageSquare className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-white/[0.06] py-6 text-[13px] text-brand-muted md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.06] py-6 text-[13px] text-brand-muted md:flex-row md:items-center md:justify-between">
           <p>Copyright 2026 blufit Gym. All rights reserved.</p>
           <p className="flex gap-4">
-            <Link href="/" className="hover:text-white">
+            <Link href="/privacy-policy" className="hover:text-white">
               Privacy Policy
             </Link>
-            <Link href="/" className="hover:text-white">
+            <Link href="/terms" className="hover:text-white">
               Terms
             </Link>
           </p>
+        </div>
+        <div className="pb-6 text-center text-[12px] uppercase tracking-widest text-brand-muted">
+          Designed and developed by{' '}
+          <a
+            href="https://megamind.studio"
+            className="text-white transition-colors hover:text-brand-blue"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Megamind Studios
+          </a>
         </div>
       </div>
     </footer>

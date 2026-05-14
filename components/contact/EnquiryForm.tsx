@@ -24,18 +24,18 @@ export function EnquiryForm() {
   return (
     <form
       onSubmit={submit}
-      className="mx-auto max-w-3xl border border-white/7 bg-brand-card p-10"
+      className="mx-auto max-w-3xl border border-white/7 bg-brand-card p-6 sm:p-10"
     >
       <div className="grid gap-4 md:grid-cols-2">
         <input
-          className="border border-white/12 bg-transparent px-4 py-3 text-[15px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
+          className="min-w-0 border border-white/12 bg-transparent px-4 py-3 text-[16px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
           placeholder="Name"
           required
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
         <input
-          className="border border-white/12 bg-transparent px-4 py-3 text-[15px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
+          className="min-w-0 border border-white/12 bg-transparent px-4 py-3 text-[16px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
           placeholder="Phone Number"
           required
           value={phone}
@@ -43,7 +43,7 @@ export function EnquiryForm() {
         />
       </div>
       <textarea
-        className="mt-4 min-h-[120px] w-full border border-white/12 bg-transparent px-4 py-3 text-[15px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
+        className="mt-4 min-h-[140px] w-full border border-white/12 bg-transparent px-4 py-3 text-[16px] text-white outline-none placeholder:text-brand-muted focus:border-brand-blue focus:shadow-[0_0_0_1px_#3b7dbf]"
         placeholder="Message / Enquiry"
         required
         value={message}

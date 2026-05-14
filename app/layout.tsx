@@ -25,10 +25,11 @@ const body = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://blufitgym.com'),
   title: {
-    default: 'blufit Gym',
-    template: '%s | blufit Gym',
+    default: 'Blu Fit Gym Bondel Mangalore | Premium Fitness Center',
+    template: '%s | Blu Fit Gym',
   },
-  description: 'Premium fitness centre in Bondel, Mangaluru.',
+  description:
+    'Premium Fitness Blue Fit Gym in Bondel, Mangalore, for weight training, cardio, Zumba, MMA, personal training, nutrition guidance, and modern fitness facilities.',
   icons: {
     icon: '/Prompt.png',
     shortcut: '/Prompt.png',

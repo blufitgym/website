@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
 import { WA_DEFAULT } from '@/lib/constants';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
 export function WhatsAppFAB() {
   return (
@@ -15,11 +15,11 @@ export function WhatsAppFAB() {
       transition={{ delay: 1.5, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       target="_blank"
       whileHover={{ scale: 1.06 }}
-    >
+      >
       <span className="pointer-events-none absolute -top-10 rounded-none bg-brand-dark px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white opacity-0 transition-opacity group-hover:opacity-100">
         Chat with us
       </span>
-      <MessageCircle className="h-6 w-6" />
+      <WhatsAppIcon className="h-6 w-6" />
     </motion.a>
   );
 }

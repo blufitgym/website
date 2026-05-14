@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="text-[11px] font-semibold uppercase tracking-widest text-brand-blue">
         Not Found
       </div>
-      <h1 className="mt-4 font-display text-[64px] uppercase leading-none text-white sm:text-[86px]">
+      <h1 className="mt-4 font-display text-[clamp(2.25rem,9vw,4rem)] uppercase leading-none text-white sm:text-[64px]">
         Page not found
       </h1>
       <p className="mt-4 max-w-xl text-[16px] leading-[1.8] text-brand-light">

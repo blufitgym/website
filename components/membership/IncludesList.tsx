@@ -18,7 +18,7 @@ export function IncludesList() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <SectionLabel>Included</SectionLabel>
-          <h2 className="font-display text-[42px] font-bold uppercase leading-[0.95] tracking-display text-white sm:text-[58px]">
+          <h2 className="max-w-[12ch] font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.95] tracking-display text-white sm:max-w-none sm:text-[48px]">
             Every Membership Includes
           </h2>
         </FadeUp>
@@ -27,7 +27,7 @@ export function IncludesList() {
           {items.map((item) => (
             <div
               key={item}
-              className="flex items-center gap-3 border border-white/4 bg-brand-card/50 px-4 py-3 text-[14px] font-medium text-brand-offwhite transition-colors hover:border-brand-blue/30"
+              className="flex items-start gap-3 border border-white/4 bg-brand-card/50 px-4 py-3 text-[14px] font-medium leading-6 text-brand-offwhite transition-colors hover:border-brand-blue/30"
             >
               <CheckCircle2 className="h-5 w-5 text-[#25D366]" />
               {item}

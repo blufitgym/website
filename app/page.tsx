@@ -23,10 +23,10 @@ function Stats() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col items-center justify-center border-l border-white/7 px-6 py-8 first:border-l-0"
+            className="flex flex-col items-center justify-center border-l border-white/7 px-6 py-6 first:border-l-0 sm:py-8"
           >
-            <div className="font-display text-[44px] leading-none text-brand-blue">{stat.value}</div>
-            <div className="mt-2 text-center text-[11px] uppercase tracking-widest text-brand-muted">
+            <div className="font-display text-[28px] leading-none text-brand-blue sm:text-[36px]">{stat.value}</div>
+            <div className="mt-2 max-w-[10ch] text-center text-[10px] uppercase tracking-widest text-brand-muted sm:text-[11px]">
               {stat.label}
             </div>
           </div>

@@ -5,7 +5,7 @@ export function MapEmbed() {
   return (
     <div>
       <iframe
-        className="h-[480px] w-full border-0 grayscale-[0.5]"
+        className="h-[320px] w-full border-0 grayscale-[0.5] sm:h-[480px]"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         src={MAPS_EMBED}

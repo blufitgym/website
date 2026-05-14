@@ -36,7 +36,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100svh-112px)] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-7xl items-center px-4 py-16 sm:min-h-[calc(100svh-112px)] sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-3xl">
           <FadeUp>
             <div className="mb-5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-brand-blue">
@@ -49,7 +49,7 @@ export function Hero() {
             {heroWords.map((word, index) => (
               <motion.h1
                 key={word}
-                className="font-display text-[64px] font-bold uppercase leading-[0.88] tracking-display text-white sm:text-[86px] md:text-[112px] lg:text-[144px]"
+                className="max-w-[8ch] font-display text-[clamp(2.2rem,9vw,4rem)] font-bold uppercase leading-[0.92] tracking-display text-white sm:max-w-none sm:text-[64px] md:text-[84px] lg:text-[108px]"
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.45 + index * 0.1, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -61,7 +61,7 @@ export function Hero() {
           </div>
 
           <FadeUp delay={0.9}>
-            <p className="mt-6 max-w-xl text-[18px] leading-[1.75] text-brand-light sm:text-[20px]">
+            <p className="mt-6 max-w-[26rem] text-[16px] leading-[1.65] text-brand-light text-pretty sm:max-w-xl sm:text-[20px] sm:leading-[1.75]">
               Premium fitness in the heart of Bondel. Train with purpose, build strength, and keep
               showing up for the version of you that is still in progress.
             </p>

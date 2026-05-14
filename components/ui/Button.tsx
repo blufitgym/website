@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
 type Variant = 'primary' | 'outline' | 'ghost' | 'whatsapp' | 'white';
 
@@ -34,12 +35,13 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-none px-8 py-4 text-[13px] font-semibold uppercase tracking-wide transition-all duration-200 ease-out';
+    'inline-flex w-full items-center justify-center gap-2 rounded-none px-8 py-4 text-[13px] font-semibold uppercase tracking-wide transition-all duration-200 ease-out sm:w-auto';
   const classes = cn(base, variantClasses[variant], className);
 
   if (href) {
     return (
       <Link className={classes} href={href} target={target}>
+        {variant === 'whatsapp' ? <WhatsAppIcon className="h-4 w-4 shrink-0" /> : null}
         {children}
       </Link>
     );
@@ -47,6 +49,7 @@ export function Button({
 
   return (
     <button className={classes} type={type} {...props}>
+      {variant === 'whatsapp' ? <WhatsAppIcon className="h-4 w-4 shrink-0" /> : null}
       {children}
     </button>
   );

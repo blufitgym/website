@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 
@@ -32,16 +33,6 @@ const services = [
     desc: 'Structured plans for progress you can actually track.',
     src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80',
   },
-  {
-    name: 'Zumba',
-    desc: 'High-energy group sessions with room to move.',
-    src: 'https://images.unsplash.com/photo-1594737626072-90dc274bc2bd?w=600&q=80',
-  },
-  {
-    name: 'MMA',
-    desc: 'Technique, conditioning, and discipline in motion.',
-    src: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
-  },
 ];
 
 const containerVariants = {
@@ -57,24 +48,34 @@ const cardVariants = {
 };
 
 export function ServicesGrid() {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollCarousel = (direction: 'left' | 'right') => {
+    const node = carouselRef.current;
+    if (!node) return;
+
+    const amount = Math.round(node.clientWidth * 0.82);
+    node.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' });
+  };
+
   return (
     <section className="bg-brand-black py-28 md:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <div className="mx-auto max-w-3xl text-center">
             <SectionLabel>What We Offer</SectionLabel>
-            <h2 className="font-display text-[42px] font-bold uppercase leading-[0.95] tracking-display text-white sm:text-[58px] lg:text-[72px]">
+            <h2 className="font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.96] tracking-display text-white sm:text-[48px] lg:text-[60px]">
               Everything You Need Under One Roof
             </h2>
             <div className="mx-auto mt-6 h-[3px] w-12 bg-brand-blue" />
             <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.7] text-brand-light sm:text-[18px]">
-              Seven services. One destination. Expert trainers. Real results.
+              Five core services. One destination. Expert trainers. Real results.
             </p>
           </div>
         </FadeUp>
 
         <motion.div
-          className="mt-16 grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          className="mt-16 grid gap-px bg-white/5 sm:grid-cols-2 lg:hidden"
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
@@ -91,27 +92,77 @@ export function ServicesGrid() {
                 className="object-cover brightness-[0.7] transition duration-500 ease-out group-hover:scale-[1.06] group-hover:brightness-[0.5]"
                 fill
                 loading="lazy"
-                sizes="(max-width: 640px) 100vw, 25vw"
+                sizes="(max-width: 640px) 100vw, 50vw"
                 src={service.src}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <div className="max-w-[13rem]">
-                  <h3 className="min-h-[4.2rem] font-display text-[23px] uppercase leading-[0.98] tracking-[0.04em] text-white sm:text-[25px] lg:text-[27px]">
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                <div className="max-w-[14rem]">
+                  <h3 className="min-h-[3.2rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[4.2rem] sm:text-[25px] lg:text-[27px]">
                     {service.name}
                   </h3>
-                  <p className="mt-1.5 min-h-[2.75rem] text-[13px] leading-[1.55] text-brand-light">
+                  <p className="mt-1.5 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
                     {service.desc}
                   </p>
-                  <div className="learn-more mt-2.5 inline-flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-widest text-brand-blue opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    Learn More
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </div>
                 </div>
               </div>
             </motion.article>
           ))}
         </motion.div>
+
+        <div className="mt-16 hidden lg:block">
+          <div className="mb-4 flex items-center justify-end gap-3">
+            <button
+              aria-label="Scroll services left"
+              className="inline-flex h-11 w-11 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
+              onClick={() => scrollCarousel('left')}
+              type="button"
+            >
+              <ArrowLeft className="h-4 w-4" />
+            </button>
+            <button
+              aria-label="Scroll services right"
+              className="inline-flex h-11 w-11 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
+              onClick={() => scrollCarousel('right')}
+              type="button"
+            >
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+
+          <div
+            ref={carouselRef}
+            className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto bg-white/5 pb-2"
+          >
+            {services.map((service) => (
+              <motion.article
+                key={service.name}
+                className="group relative aspect-[3/4] min-w-[32%] shrink-0 snap-start overflow-hidden bg-brand-card xl:min-w-[30%] 2xl:min-w-[28%]"
+                variants={cardVariants}
+              >
+                <Image
+                  alt={service.name}
+                  className="object-cover brightness-[0.7] transition duration-500 ease-out group-hover:scale-[1.06] group-hover:brightness-[0.5]"
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 1280px) 33vw, 28vw"
+                  src={service.src}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                  <div className="max-w-[14rem]">
+                    <h3 className="min-h-[3.2rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[4.2rem] sm:text-[25px] lg:text-[27px]">
+                      {service.name}
+                    </h3>
+                    <p className="mt-1.5 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
+                      {service.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -32,15 +32,15 @@ export function PricingCards() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <SectionLabel>Standard Plans</SectionLabel>
-          <h2 className="font-display text-[42px] font-bold uppercase leading-[0.95] tracking-display text-white sm:text-[58px]">
+          <h2 className="max-w-[12ch] font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.95] tracking-display text-white sm:max-w-none sm:text-[48px]">
             Standard Membership Pricing
           </h2>
         </FadeUp>
 
-        <div className="mt-8 inline-flex border border-white/8 bg-brand-card p-1">
+        <div className="mt-8 flex w-full max-w-sm border border-white/8 bg-brand-card p-1 sm:inline-flex sm:w-auto">
           <button
             className={[
-              'px-5 py-3 text-[13px] font-semibold uppercase tracking-widest transition-colors',
+              'flex-1 px-4 py-3 text-[12px] font-semibold uppercase tracking-widest transition-colors sm:px-5 sm:text-[13px]',
               plan === 'adult' ? 'bg-brand-blue text-white' : 'text-brand-light hover:text-white',
             ].join(' ')}
             onClick={() => setPlan('adult')}
@@ -50,7 +50,7 @@ export function PricingCards() {
           </button>
           <button
             className={[
-              'px-5 py-3 text-[13px] font-semibold uppercase tracking-widest transition-colors',
+              'flex-1 px-4 py-3 text-[12px] font-semibold uppercase tracking-widest transition-colors sm:px-5 sm:text-[13px]',
               plan === 'student' ? 'bg-brand-blue text-white' : 'text-brand-light hover:text-white',
             ].join(' ')}
             onClick={() => setPlan('student')}
@@ -60,11 +60,11 @@ export function PricingCards() {
           </button>
         </div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
             <div
               key={card.duration}
-              className="relative border border-white/6 bg-brand-card p-7 text-center transition-transform hover:-translate-y-1 hover:border-brand-blue/40"
+              className="relative border border-white/6 bg-brand-card p-6 text-center transition-transform hover:-translate-y-1 hover:border-brand-blue/40 sm:p-7"
             >
               {card.best ? (
                 <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 border border-brand-blue bg-brand-blue px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
@@ -75,11 +75,11 @@ export function PricingCards() {
               <div className="text-[12px] uppercase tracking-widest text-brand-muted">
                 {card.duration}
               </div>
-              <div className="mt-4 font-display text-[52px] leading-none text-white">
-                <span className="mr-1 text-[24px]">Rs</span>
+              <div className="mt-4 font-display text-[36px] leading-none text-white sm:text-[46px]">
+                <span className="mr-1 text-[18px] sm:text-[22px]">Rs</span>
                 {card.price.toLocaleString('en-IN')}
               </div>
-              <div className="mt-2 text-[11px] text-brand-muted">
+              <div className="mt-2 text-[11px] text-brand-muted sm:text-[12px]">
                 Rs {card.perMonth.toLocaleString('en-IN')} / month
               </div>
             </div>
@@ -92,7 +92,7 @@ export function PricingCards() {
         </p>
 
         <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="text-[14px] text-brand-light">
+          <div className="max-w-xl text-[14px] leading-7 text-brand-light">
             Need help picking a plan? We can help based on your goals and schedule.
           </div>
           <Button href={WA_PLAN_HELP} target="_blank" variant="whatsapp">
