@@ -12,7 +12,7 @@ import {
 } from '@/lib/constants';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
-const logoSrc = encodeURI('/Blue Fit Logo.png');
+const logoSrc = encodeURI('/Blue Fit Logoo.png');
 
 const footerLinks = [
   { label: 'Home', href: '/' },

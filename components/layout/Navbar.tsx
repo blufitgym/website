@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { WA_DEFAULT } from '@/lib/constants';
 import { usePathname } from 'next/navigation';
 
-const logoSrc = encodeURI('/Blue Fit Logo.png');
+const logoSrc = encodeURI('/Blue Fit Logoo.png');
 
 const navItems = [
   { label: 'Home', href: '/' },
