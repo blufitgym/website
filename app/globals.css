@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-black text-brand-offwhite font-body antialiased;
+  background:
+    radial-gradient(circle at top left, rgba(59, 125, 191, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(212, 68, 116, 0.06), transparent 22%),
+    linear-gradient(180deg, #080c10 0%, #0d1117 60%, #080c10 100%);
+}
+
+::selection {
+  background: rgba(59, 125, 191, 0.35);
+  color: white;
+}
+
+a {
+  @apply transition-colors;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.editorial-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
