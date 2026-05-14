@@ -19,7 +19,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw 100vh"
-          src="/Web - Hersection.webp"
+          src="/Web - Hersection.png"
         />
       </div>
 
