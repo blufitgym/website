@@ -77,8 +77,8 @@ export function ServicesGrid() {
             <h2 className="font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.96] tracking-display text-white sm:text-[48px] lg:text-[60px]">
               Everything You Need Under One Roof
             </h2>
-            <div className="mx-auto mt-6 h-[3px] w-12 bg-brand-blue" />
-            <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.7] text-brand-light sm:text-[18px]">
+            <div className="mx-auto mt-4 h-[2px] w-12 bg-brand-blue" />
+            <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-[1.7] text-brand-light sm:text-[18px]">
               Seven services. One destination. Expert trainers. Real results.
             </p>
           </div>
@@ -106,43 +106,24 @@ export function ServicesGrid() {
                 src={service.src}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                <div className="max-w-[14rem]">
-                  <h3 className="min-h-[3.2rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[4.2rem] sm:text-[25px] lg:text-[27px]">
-                    {service.name}
-                  </h3>
-                  <p className="mt-1.5 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
-                    {service.desc}
-                  </p>
+                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                  <div className="max-w-[18rem]">
+                    <h3 className="min-h-[2.8rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[3.2rem] sm:text-[24px] lg:text-[26px]">
+                      {service.name}
+                    </h3>
+                    <p className="mt-1 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
+                      {service.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
             </motion.article>
           ))}
         </motion.div>
 
         <div className="mt-16 hidden lg:block">
-          <div className="mb-4 flex items-center justify-end gap-3">
-            <button
-              aria-label="Scroll services left"
-              className="inline-flex h-11 w-11 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
-              onClick={() => scrollCarousel('left')}
-              type="button"
-            >
-              <ArrowLeft className="h-4 w-4" />
-            </button>
-            <button
-              aria-label="Scroll services right"
-              className="inline-flex h-11 w-11 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
-              onClick={() => scrollCarousel('right')}
-              type="button"
-            >
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
-
           <div
             ref={carouselRef}
-            className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto bg-white/5 pb-2"
+            className="hide-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2"
           >
             {services.map((service) => (
               <motion.article
@@ -159,18 +140,37 @@ export function ServicesGrid() {
                   src={service.src}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                  <div className="max-w-[14rem]">
-                    <h3 className="min-h-[3.2rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[4.2rem] sm:text-[25px] lg:text-[27px]">
+                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                  <div className="max-w-[18rem]">
+                    <h3 className="min-h-[2.8rem] font-display text-[20px] uppercase leading-[1] tracking-[0.04em] text-white sm:min-h-[3.2rem] sm:text-[24px] lg:text-[26px]">
                       {service.name}
                     </h3>
-                    <p className="mt-1.5 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
+                    <p className="mt-1 min-h-[2.5rem] text-[12px] leading-[1.6] text-brand-light sm:text-[13px]">
                       {service.desc}
                     </p>
                   </div>
                 </div>
               </motion.article>
             ))}
+          </div>
+
+          <div className="mt-10 flex items-center justify-end gap-3">
+            <button
+              aria-label="Scroll services left"
+              className="inline-flex h-12 w-12 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
+              onClick={() => scrollCarousel('left')}
+              type="button"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <button
+              aria-label="Scroll services right"
+              className="inline-flex h-12 w-12 items-center justify-center border border-white/10 bg-white/5 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
+              onClick={() => scrollCarousel('right')}
+              type="button"
+            >
+              <ArrowRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </div>

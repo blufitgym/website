@@ -55,18 +55,7 @@ export function Footer() {
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                 <span>{ADDRESS}</span>
               </p>
-              <Link className="flex items-center gap-2 text-white hover:text-brand-blue" href={MAPS_URL}>
-                Open in Google Maps
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <a
-                className="flex items-center gap-2 text-white hover:text-brand-blue"
-                href={WA_DEFAULT}
-                target="_blank"
-              >
-                Message on WhatsApp
-                <WhatsAppIcon className="h-4 w-4" />
-              </a>
+              
             </div>
           </div>
 
@@ -77,9 +66,12 @@ export function Footer() {
             <div className="space-y-3 text-[13px] leading-6 text-brand-muted">
               <p className="flex items-start gap-3">
                 <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                <span>
-                  <span className="block">Mon-Sat: {HOURS_WEEKDAY_MORNING}</span>
-                  <span className="block">{HOURS_WEEKDAY_EVENING}</span>
+                <span className="flex gap-2">
+                  <span className="shrink-0 text-white/50">Mon-Sat:</span>
+                  <span className="flex flex-col">
+                    <span>{HOURS_WEEKDAY_MORNING}</span>
+                    <span>{HOURS_WEEKDAY_EVENING}</span>
+                  </span>
                 </span>
               </p>
             </div>
@@ -112,16 +104,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/[0.06] py-6 text-[13px] text-brand-muted md:flex-row md:items-center md:justify-between">
-          <p>Copyright 2026 blufit Gym. All rights reserved.</p>
-          <p className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-white">
+        <div className="mt-12 flex flex-col items-center gap-4 border-t border-white/[0.06] py-8 text-[13px] text-brand-muted">
+          <p> All rights reserved. © 2026 BluFit.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/terms" className="hover:text-white transition-colors">
               Terms
             </Link>
-          </p>
+          </div>
         </div>
         <div className="pb-6 text-center text-[12px] uppercase tracking-widest text-brand-muted">
           Designed and developed by{' '}

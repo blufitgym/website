@@ -3,9 +3,8 @@ import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
 import './globals.css';
-import { AnnouncementBar } from '@/components/layout/AnnouncementBar';
 import { Footer } from '@/components/layout/Footer';
-import { Navbar } from '@/components/layout/Navbar';
+import { LayoutClient } from '@/components/layout/LayoutClient';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import { WhatsAppFAB } from '@/components/layout/WhatsAppFAB';
 
@@ -59,9 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           `}
         </Script>
         <SmoothScroll />
-        <AnnouncementBar />
-        <Navbar />
-        <main className="pt-[68px] sm:pt-[112px]">{children}</main>
+        <LayoutClient>{children}</LayoutClient>
         <Footer />
         <WhatsAppFAB />
       </body>

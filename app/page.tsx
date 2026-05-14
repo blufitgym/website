@@ -19,15 +19,17 @@ function Stats() {
   ];
 
   return (
-    <section className="border-y border-white/5 bg-brand-dark2 py-10">
+    <section className="border-y border-white/5 bg-brand-dark2 py-16 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-px px-4 sm:grid-cols-2 lg:grid-cols-4 sm:px-6 lg:px-8">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="flex flex-col items-center justify-center border-l border-white/7 px-6 py-6 first:border-l-0 sm:py-8"
+            className="flex flex-col items-center justify-center gap-3 border-l border-white/7 px-6 py-10 first:border-l-0"
           >
-            <div className="font-display text-[28px] leading-none text-brand-blue sm:text-[36px]">{stat.value}</div>
-            <div className="mt-2 max-w-[10ch] text-center text-[10px] uppercase tracking-widest text-brand-muted sm:text-[11px]">
+            <div className="font-display text-[32px] leading-none text-brand-blue sm:text-[42px]">
+              {stat.value}
+            </div>
+            <div className="text-center text-[10px] uppercase leading-tight tracking-widest text-brand-muted sm:text-[11px]">
               {stat.label}
             </div>
           </div>

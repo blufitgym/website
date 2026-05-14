@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { privacyMetadata } from '@/lib/metadata';
-import { WA_DEFAULT } from '@/lib/constants';
+import { ADDRESS, EMAIL } from '@/lib/constants';
 
 export const metadata: Metadata = privacyMetadata;
 
@@ -99,12 +99,28 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-7 text-brand-light">
               If you have questions about this policy or want to update your information, please
-              reach out on WhatsApp and we’ll help you.
+              contact us using the details below.
             </p>
-            <div className="mt-6">
-              <Button href={WA_DEFAULT} target="_blank" variant="whatsapp">
-                Chat With Us on WhatsApp
-              </Button>
+            <div className="mt-6 space-y-4">
+              <div className="flex flex-col gap-1">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-brand-blue">
+                  Email Us
+                </span>
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-[17px] text-white hover:text-brand-blue transition-colors"
+                >
+                  {EMAIL}
+                </a>
+              </div>
+              <div className="flex flex-col gap-1 pt-2">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-brand-blue">
+                  Visit Us
+                </span>
+                <p className="max-w-md text-[17px] leading-relaxed text-white">
+                  {ADDRESS}
+                </p>
+              </div>
             </div>
           </article>
         </FadeUp>

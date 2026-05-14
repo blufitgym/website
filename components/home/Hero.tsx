@@ -18,7 +18,7 @@ export function Hero() {
           className="object-cover brightness-[0.9]"
           fill
           priority
-          sizes="100vw"
+          sizes="100vw 100vh"
           src="/Web - Hersection.webp"
         />
       </div>
@@ -36,7 +36,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-7xl items-center px-4 py-16 sm:min-h-[calc(100svh-112px)] sm:px-6 sm:py-20 lg:px-8">
+      <div className="relative mx-auto flex min-h-[calc(100svh-68px)] max-w-7xl items-center px-4 py-16 sm:min-h-[calc(100svh-124px)] sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-3xl">
           <FadeUp>
             <div className="mb-5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-brand-blue">
@@ -61,7 +61,7 @@ export function Hero() {
           </div>
 
           <FadeUp delay={0.9}>
-            <p className="mt-6 max-w-[26rem] text-[16px] leading-[1.65] text-brand-light text-pretty sm:max-w-xl sm:text-[20px] sm:leading-[1.75]">
+            <p className="mt-4 max-w-[26rem] text-[16px] leading-[1.65] text-brand-light text-pretty sm:max-w-xl sm:text-[20px] sm:leading-[1.75]">
               Premium fitness in the heart of Bondel. Train with purpose, build strength, and keep
               showing up for the version of you that is still in progress.
             </p>

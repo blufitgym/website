@@ -24,7 +24,7 @@ export default function ContactPage() {
                 Contact
               </h1>
               <p className="mt-5 max-w-[28rem] text-[16px] leading-[1.7] text-brand-light sm:max-w-2xl sm:text-[18px] sm:leading-[1.8]">
-                We are on Airport Road, Bondel, Mangaluru. Walk in or reach out before you visit.
+               We’re located at Airport Road, Bondel, Mangaluru. Feel free to walk in or contact us before you visit.
               </p>
             </div>
           </FadeUp>
@@ -45,8 +45,7 @@ export default function ContactPage() {
       <section className="border-y border-white/5 bg-brand-dark2 py-14 sm:py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-8">
           <div className="max-w-2xl text-[15px] leading-[1.7] text-brand-light sm:text-[16px] sm:leading-[1.8]">
-            Chat with us directly on WhatsApp for membership enquiries, timings, or any questions.
-            We respond quickly.
+Chat with us on WhatsApp for membership enquiries, timings, or any questions. We’re here to help!
           </div>
           <Button href={WA_DEFAULT} target="_blank" variant="whatsapp">
             Message Us on WhatsApp

@@ -45,9 +45,9 @@ export default function MembershipPage() {
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
-                ['Adults', 'Rs 14,400 / Year'],
-                ['Students', 'Rs 9,600 / Year'],
-                ['Admission', 'Rs 500 one-time'],
+                ['Adults', '₹14,400 / Year'],
+                ['Students', '₹9,600 / Year'],
+                ['Admission', '₹500 one-time'],
               ].map(([label, value]) => (
                 <div key={label} className="border border-white/10 bg-white/5 p-5">
                   <div className="text-[11px] uppercase tracking-widest text-brand-muted">{label}</div>

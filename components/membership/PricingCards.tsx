@@ -76,19 +76,18 @@ export function PricingCards() {
                 {card.duration}
               </div>
               <div className="mt-4 font-display text-[36px] leading-none text-white sm:text-[46px]">
-                <span className="mr-1 text-[18px] sm:text-[22px]">Rs</span>
+                <span className="mr-1 text-[18px] sm:text-[22px]">₹</span>
                 {card.price.toLocaleString('en-IN')}
               </div>
               <div className="mt-2 text-[11px] text-brand-muted sm:text-[12px]">
-                Rs {card.perMonth.toLocaleString('en-IN')} / month
+                ₹{card.perMonth.toLocaleString('en-IN')} / month
               </div>
             </div>
           ))}
         </div>
 
         <p className="mt-6 text-[13px] leading-6 text-brand-muted">
-          * One-time admission fee of Rs 500 applicable on all memberships. Prices include access
-          to all general gym facilities.
+        One-time admission fee of Rs 500 applicable to all memberships. Prices include access to all general gym facilities. For students, a valid ID proof is mandatory during registration.
         </p>
 
         <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">

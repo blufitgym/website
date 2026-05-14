@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import Link from 'next/link';
 import { WHATSAPP_NUM } from '@/lib/constants';
 
 export function EnquiryForm() {
@@ -93,7 +94,10 @@ export function EnquiryForm() {
         <p className="mt-4 text-[13px] leading-6 text-red-300">{error}</p>
       ) : (
         <p className="mt-4 text-[13px] leading-6 text-brand-muted">
-          Your enquiry is saved first, then WhatsApp opens with your details pre-filled.
+          Your enquiry is saved first, then WhatsApp opens. By sending, you agree to our{' '}
+          <Link href="/privacy-policy" className="text-white hover:text-brand-blue underline-offset-4 hover:underline">
+            Privacy Policy
+          </Link>.
         </p>
       )}
     </form>

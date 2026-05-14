@@ -33,16 +33,16 @@ export function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[55] sm:top-10">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div
-          className={[
-            'flex h-[60px] items-center justify-between border border-[#223042] transition-all duration-300 sm:h-[68px] sm:border-white/10',
-            scrolled
-              ? 'bg-[#0a0f16]/95 shadow-[0_18px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl'
-              : 'bg-[#0a0f16]/92 shadow-[0_16px_36px_rgba(0,0,0,0.18)] backdrop-blur-md',
-          ].join(' ')}
-        >
+    <header className="relative z-[55]">
+      <div
+        className={[
+          'w-full transition-all duration-300',
+          scrolled
+            ? 'bg-[#0a0f16]/98 border-b border-white/5 shadow-lg backdrop-blur-xl h-[60px] sm:h-[72px]'
+            : 'bg-[#0a0f16]/90 border-b border-white/5 backdrop-blur-md h-[68px] sm:h-[84px]',
+        ].join(' ')}
+      >
+        <div className="mx-auto flex h-full w-full items-center justify-between px-4 sm:px-8 lg:px-12">
           <Link href="/" className="relative flex items-center px-3 sm:px-4">
             <Image
               alt="blufit logo"
@@ -92,8 +92,8 @@ export function Navbar() {
       </div>
 
       {open ? (
-        <div className="fixed inset-x-0 top-[72px] z-[54] px-3 lg:hidden">
-          <div className="mx-auto w-full max-w-7xl border border-[#223042] bg-[#0a0f16]/98 px-5 py-6 shadow-[0_24px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+        <div className="absolute inset-x-0 top-full z-[54] lg:hidden">
+          <div className="w-full bg-[#0a0f16]/98 px-5 py-8 shadow-2xl backdrop-blur-2xl border-b border-white/5">
             <div className="flex flex-col gap-5 text-center">
               {navItems.map((item, index) => (
                 <Link
