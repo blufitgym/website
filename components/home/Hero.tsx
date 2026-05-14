@@ -15,24 +15,24 @@ export function Hero() {
       <div className="absolute inset-0">
         <Image
           alt="Dark gym interior"
-          className="object-cover brightness-[0.35]"
+          className="object-cover brightness-[0.9]"
           fill
           priority
           sizes="100vw"
-          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
+          src="/Web - Hersection.webp"
         />
       </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,16,0.95)_0%,rgba(8,12,16,0.75)_50%,rgba(8,12,16,0.28)_100%),linear-gradient(to_top,rgba(8,12,16,0.9)_0%,transparent_50%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,16,0.95)_0%,rgba(8,12,16,0.75)_50%,rgba(8,12,16,0.28)_100%),linear-gradient(to_top,rgba(8,12,16,0.9)_0%,transparent_50%)]" /> */}
 
-      <div className="absolute inset-0 hidden xl:block">
+      <div className="absolute inset-0 lg:hidden ">
         <Image
           alt="Athlete silhouette"
-          className="object-contain object-right-bottom [mask-image:linear-gradient(to_top,transparent_0%,black_22%)]"
+          className="object-cover object-right-bottom brightness-[0.9]"
           fill
           priority
           sizes="45vw"
-          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&q=80"
+          src="/Phone - Hersection.webp"
         />
       </div>
 

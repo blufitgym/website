@@ -40,13 +40,13 @@ export default function MembershipPage() {
               Get Our Best Rate Ever
             </h2>
             <p className="mt-4 max-w-[30rem] text-[15px] leading-[1.7] text-brand-light sm:max-w-3xl sm:text-[16px] sm:leading-[1.8]">
-              This offer is available exclusively for our first 100 members and will not be
+              This offer is available exclusively for our first 50 members and will not be
               repeated after spots are filled.
             </p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
-                ['Adults', 'Rs 14,999 / Year'],
-                ['Students', 'Rs 9,999 / Year'],
+                ['Adults', 'Rs 14,400 / Year'],
+                ['Students', 'Rs 9,600 / Year'],
                 ['Admission', 'Rs 500 one-time'],
               ].map(([label, value]) => (
                 <div key={label} className="border border-white/10 bg-white/5 p-5">

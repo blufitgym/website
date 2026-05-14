@@ -1,11 +1,12 @@
-import { MapPin, Phone, Mail, Instagram, Clock3 } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook, Clock3 } from 'lucide-react';
 import Link from 'next/link';
 import type { ComponentType } from 'react';
 import {
   ADDRESS,
   EMAIL,
-  HOURS_SUNDAY,
-  HOURS_WEEKDAY,
+  FACEBOOK,
+  HOURS_WEEKDAY_EVENING,
+  HOURS_WEEKDAY_MORNING,
   INSTAGRAM as INSTAGRAM_URL,
   PHONE,
   WA_DEFAULT,
@@ -22,6 +23,12 @@ const cards = [
     label: 'Instagram',
     value: '@blufitgym',
     href: INSTAGRAM_URL,
+  },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    value: 'Blu Fit Gym',
+    href: FACEBOOK,
   },
 ];
 
@@ -65,10 +72,10 @@ export function ContactInfo() {
         <div className="mt-4 space-y-2 text-[14px] text-brand-light">
           <div className="flex items-center gap-3">
             <Clock3 className="h-4 w-4 text-brand-blue" />
-            <span>Mon-Sat: {HOURS_WEEKDAY}</span>
-          </div>
-          <div className="flex items-center gap-3 pl-7">
-            <span>Sunday: {HOURS_SUNDAY}</span>
+            <span>
+              <span className="block">Mon-Sat: {HOURS_WEEKDAY_MORNING}</span>
+              <span className="block">{HOURS_WEEKDAY_EVENING}</span>
+            </span>
           </div>
         </div>
       </div>

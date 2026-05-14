@@ -37,7 +37,7 @@ export const membershipMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Membership Plans | Blu Fit Gym Mangaluru',
   description:
-    'View Blu Fit Gym membership pricing for adults and students. Inaugural offer - Rs 14,999/year for adults, Rs 9,999/year for students.',
+    'View Blu Fit Gym membership pricing for adults and students. Inaugural offer - Rs 14,400/year for adults, Rs 9,600/year for students.',
   alternates: { canonical: '/membership' },
 };
 

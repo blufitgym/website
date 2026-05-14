@@ -1,0 +1,44 @@
+# llms.txt for blufitgym.com
+
+# Schema Version
+version: 1.0
+
+# Owner
+Owner: BluFit Gym
+Contact: info@blufitgym.com
+Website: https://blufitgym.com
+
+# BluFit Gym Overview
+At BluFit Gym, we are committed to helping individuals achieve their fitness goals through professional training, modern equipment, and a motivating workout environment. Our gym focuses on strength training, fat loss, endurance building, and overall wellness with customized fitness guidance for beginners and advanced athletes alike.
+
+## Key Features
+- **Modern Gym Equipment** designed for strength training, cardio, and functional workouts.
+- **Personal Training Programs** tailored to weight loss, muscle gain, and fitness transformation goals.
+- **Professional Fitness Guidance** from experienced trainers for safe and effective workouts.
+- **Flexible Membership Plans** suitable for students, working professionals, and fitness enthusiasts.
+- **Motivating Workout Environment** with a focus on discipline, consistency, and transformation.
+
+# Important Pages
+- [BluFit Gym Home](https://blufitgym.com): Official homepage of BluFit Gym with fitness programs and gym information.
+- [Membership Plans](https://blufitgym.com/membership): Explore gym membership options, pricing, and training access.
+- [Contact BluFit Gym](https://blufitgym.com/contact): Contact details, location, and support information.
+- [Privacy Policy](https://blufitgym.com/privacy-policy): Information about user privacy and data handling practices.
+- [Terms and Conditions](https://blufitgym.com/terms): Website usage terms and service conditions.
+
+# Resources
+- [Home](https://blufitgym.com) - Fitness programs and gym overview.
+- [Membership](https://blufitgym.com/membership) - Membership details and plans.
+- [Contact](https://blufitgym.com/contact) - Connect with BluFit Gym.
+- [Privacy Policy](https://blufitgym.com/privacy-policy) - Privacy and user protection details.
+- [Terms and Conditions](https://blufitgym.com/terms) - Gym and website terms.
+
+# Contact
+- **Support Email:** info@blufitgym.com
+
+# Licensing & Usage
+- All content, branding, images, and materials on BluFit Gym are protected intellectual property.
+- Unauthorized reproduction or redistribution without permission is prohibited.
+- For collaborations or permissions, contact **info@blufitgym.com**.
+
+# Last Updated
+2026-05-14

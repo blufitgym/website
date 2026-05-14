@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, MapPin, Clock3, ArrowUpRight } from 'lucide-react';
-import { ADDRESS, HOURS_SUNDAY, HOURS_WEEKDAY, INSTAGRAM, MAPS_URL, WA_DEFAULT } from '@/lib/constants';
+import { Instagram, Facebook, MapPin, Clock3, ArrowUpRight } from 'lucide-react';
+import {
+  ADDRESS,
+  FACEBOOK,
+  HOURS_WEEKDAY_EVENING,
+  HOURS_WEEKDAY_MORNING,
+  INSTAGRAM,
+  MAPS_URL,
+  WA_DEFAULT,
+} from '@/lib/constants';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
 const logoSrc = encodeURI('/Blue Fit Logo.png');
@@ -69,10 +77,10 @@ export function Footer() {
             <div className="space-y-3 text-[13px] leading-6 text-brand-muted">
               <p className="flex items-start gap-3">
                 <Clock3 className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                <span>Mon-Sat: {HOURS_WEEKDAY}</span>
-              </p>
-              <p className="flex items-start gap-3 pl-7">
-                <span>Sunday: {HOURS_SUNDAY}</span>
+                <span>
+                  <span className="block">Mon-Sat: {HOURS_WEEKDAY_MORNING}</span>
+                  <span className="block">{HOURS_WEEKDAY_EVENING}</span>
+                </span>
               </p>
             </div>
             <div className="mt-6 flex gap-3">
@@ -83,6 +91,14 @@ export function Footer() {
                 rel="noreferrer"
               >
                 <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                className="inline-flex h-9 w-9 items-center justify-center border border-white/15 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"
+                href={FACEBOOK}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Facebook className="h-4 w-4" />
               </a>
               <a
                 className="inline-flex h-9 w-9 items-center justify-center border border-white/15 text-white transition-colors hover:border-brand-blue hover:text-brand-blue"

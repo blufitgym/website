@@ -2,21 +2,26 @@
 
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Coffee, Lock, Route, Shield, Sparkles } from 'lucide-react';
+import { Camera, Coffee, Fan, Footprints, Lock, UsersRound, Dumbbell } from 'lucide-react';
 import { FadeUp } from '@/components/ui/FadeUp';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { useRef } from 'react';
 
 const facilities = [
   {
-    icon: Route,
+    icon: Footprints,
     title: 'Outdoor Running Track',
-    desc: 'Dedicated track for cardio and warm-up.',
+    desc: 'Open space for warm-ups, cardio, and active recovery.',
   },
   {
     icon: Coffee,
-    title: 'Cafe Inside the Gym',
-    desc: 'Fuel up before or refuel after training.',
+    title: 'Fitness Supplement Café',
+    desc: 'Quick fuel and recovery options before or after training.',
+  },
+  {
+    icon: Dumbbell,
+    title: 'Professional Training Support',
+    desc: 'Guidance from experienced trainers across every session.',
   },
   {
     icon: Lock,
@@ -24,14 +29,19 @@ const facilities = [
     desc: 'Safe storage for your belongings.',
   },
   {
-    icon: Sparkles,
+    icon: UsersRound,
     title: 'Separate Ladies Batch',
-    desc: 'Dedicated sessions in a comfortable space.',
+    desc: 'Comfortable sessions planned for privacy and confidence.',
   },
   {
-    icon: Shield,
+    icon: Camera,
     title: '24x7 Surveillance',
-    desc: 'Full-premise cameras for your security.',
+    desc: 'Round-the-clock monitoring for a safer training environment.',
+  },
+  {
+    icon: Fan,
+    title: 'Fully Air Conditioned Space',
+    desc: 'A cool, comfortable environment for focused workouts.',
   },
 ];
 
@@ -58,12 +68,29 @@ export function FacilitiesStrip() {
               better, more comfortable, and more rewarding.
             </p>
 
+            <motion.div
+              className="relative mt-8 aspect-[16/11] overflow-hidden sm:mt-10 lg:hidden"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <Image
+                alt="Gym facilities"
+                className="object-cover"
+                fill
+                loading="lazy"
+                sizes="100vw"
+                src="/Section-image.webp"
+              />
+            </motion.div>
+
             <div className="mt-10 space-y-3">
               {facilities.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
-                  key={item.title}
+                    key={item.title}
                     className="flex items-start gap-4 border border-white/5 bg-brand-card/50 px-4 py-4 transition-colors hover:border-brand-blue/30"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center bg-brand-blueGlow text-brand-blue">
@@ -83,7 +110,7 @@ export function FacilitiesStrip() {
         </FadeUp>
 
         <motion.div
-          className="relative min-h-[360px] overflow-hidden sm:min-h-[500px] lg:min-h-[640px]"
+          className="relative hidden min-h-[360px] overflow-hidden sm:min-h-[500px] lg:block lg:min-h-[640px]"
           style={{ y }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -96,7 +123,7 @@ export function FacilitiesStrip() {
             fill
             loading="lazy"
             sizes="(max-width: 1024px) 100vw, 45vw"
-            src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=900&q=80"
+            src="/Section-image.webp"
           />
         </motion.div>
       </div>

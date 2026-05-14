@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { homeMetadata } from '@/lib/metadata';
 import { Hero } from '@/components/home/Hero';
+import { AboutSection } from '@/components/home/AboutSection';
 import { ServicesGrid } from '@/components/home/ServicesGrid';
 import { SectionDivider } from '@/components/home/SectionDivider';
 import { FacilitiesStrip } from '@/components/home/FacilitiesStrip';
@@ -12,7 +13,7 @@ export const metadata: Metadata = homeMetadata;
 function Stats() {
   const stats = [
     { value: '7+', label: 'Services' },
-    { value: '100', label: 'Founding Member Spots' },
+    { value: '24x7', label: 'Surveillance Cameras' },
     { value: '1', label: 'Outdoor Running Track' },
     { value: '3', label: 'Premium Equipment Zones' },
   ];
@@ -40,6 +41,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <AboutSection />
       <Stats />
       <ServicesGrid />
       <SectionDivider

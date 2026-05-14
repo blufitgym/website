@@ -2,7 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { ChevronRight, X } from 'lucide-react';
-import { ADDRESS, HOURS_SUNDAY, HOURS_WEEKDAY, INAUGURATION } from '@/lib/constants';
+import {
+  ADDRESS,
+  HOURS_WEEKDAY_EVENING,
+  HOURS_WEEKDAY_MORNING,
+  INAUGURATION,
+} from '@/lib/constants';
 
 const STORAGE_KEY = 'blufit-announcement-dismissed';
 const inaugurationDate = new Date(`${INAUGURATION}T00:00:00+05:30`);
@@ -16,11 +21,11 @@ function getMessage() {
     );
 
     return diffDays <= 1
-      ? 'Inauguration: 16 May 2026 - claim your founding member spot'
-      : `Inauguration in ${diffDays} days - claim your founding member spot`;
+      ? 'Inauguration: 16 May 2026 - claim your  spot'
+      : `Inauguration in ${diffDays} days - claim your  spot`;
   }
 
-  return `Mon-Sat: ${HOURS_WEEKDAY} - Sun: ${HOURS_SUNDAY} - ${ADDRESS}`;
+  return `Mon-Sat: ${HOURS_WEEKDAY_MORNING} & ${HOURS_WEEKDAY_EVENING} - ${ADDRESS}`;
 }
 
 export function AnnouncementBar() {

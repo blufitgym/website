@@ -10,29 +10,39 @@ import { SectionLabel } from '@/components/ui/SectionLabel';
 const services = [
   {
     name: 'Weight Training',
-    desc: 'Free weights, machines, and a focused training floor.',
+    desc: 'Build strength with professional-grade equipment and expert guidance.',
     src: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80',
   },
   {
     name: 'Cardio Exercises',
-    desc: 'Treadmills, conditioning, and moving with intent.',
+    desc: 'Improve endurance with structured cardio programmes and outdoor track access.',
     src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80',
   },
   {
     name: 'Personal Training',
-    desc: 'One-on-one coaching built around your goals.',
+    desc: 'One-on-one sessions designed around your specific fitness goals.',
     src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80',
   },
   {
-    name: 'Diet & Nutrition',
-    desc: 'Practical guidance that keeps your routine honest.',
+    name: 'Diet and Nutrition',
+    desc: 'Customised nutrition plans to complement your training.',
     src: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',
   },
   {
     name: 'Fitness Programs',
-    desc: 'Structured plans for progress you can actually track.',
+    desc: 'Structured group programmes for all fitness levels.',
     src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80',
   },
+  // {
+  //   name: 'Zumba',
+  //   desc: 'High-energy dance fitness sessions for all ages.',
+  //   src: 'https://images.unsplash.com/photo-1594737626072-90dc274bc2bd?w=600&q=80',
+  // },
+  // {
+  //   name: 'MMA',
+  //   desc: 'Mixed martial arts training for discipline, strength, and self-defence.',
+  //   src: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80',
+  // },
 ];
 
 const containerVariants = {
@@ -69,7 +79,7 @@ export function ServicesGrid() {
             </h2>
             <div className="mx-auto mt-6 h-[3px] w-12 bg-brand-blue" />
             <p className="mx-auto mt-5 max-w-2xl text-[16px] leading-[1.7] text-brand-light sm:text-[18px]">
-              Five core services. One destination. Expert trainers. Real results.
+              Seven services. One destination. Expert trainers. Real results.
             </p>
           </div>
         </FadeUp>
