@@ -96,13 +96,17 @@ export function ServicesGrid() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <h3 className="font-display text-[28px] uppercase leading-tight text-white">
-                  {service.name}
-                </h3>
-                <p className="mt-1 text-[13px] leading-6 text-brand-light">{service.desc}</p>
-                <div className="learn-more mt-3 inline-flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-widest text-brand-blue opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  Learn More
-                  <ArrowRight className="h-3.5 w-3.5" />
+                <div className="max-w-[13rem]">
+                  <h3 className="min-h-[4.2rem] font-display text-[23px] uppercase leading-[0.98] tracking-[0.04em] text-white sm:text-[25px] lg:text-[27px]">
+                    {service.name}
+                  </h3>
+                  <p className="mt-1.5 min-h-[2.75rem] text-[13px] leading-[1.55] text-brand-light">
+                    {service.desc}
+                  </p>
+                  <div className="learn-more mt-2.5 inline-flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-widest text-brand-blue opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    Learn More
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
                 </div>
               </div>
             </motion.article>
