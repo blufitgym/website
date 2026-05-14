@@ -46,7 +46,7 @@ export function Navbar() {
           <Link href="/" className="relative flex items-center px-3 sm:px-4">
             <Image
               alt="blufit logo"
-              className="h-8 w-auto sm:h-12"
+              className="h-10 w-auto sm:h-12"
               height={72}
               priority
               src={logoSrc}
