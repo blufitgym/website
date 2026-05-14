@@ -34,7 +34,7 @@ export default function MembershipPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-none border-2 border-brand-pink bg-brand-card2 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] sm:p-12">
             <div className="inline-flex rounded-full bg-brand-pink px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-white">
-              Limited Offer - First 100 Members Only
+              Limited Offer - First 50 Members Only
             </div>
             <h2 className="mt-6 max-w-[11ch] font-display text-[clamp(2rem,8vw,3.5rem)] font-bold uppercase leading-[0.95] tracking-display text-white sm:max-w-none sm:text-[48px]">
               Get Our Best Rate Ever
